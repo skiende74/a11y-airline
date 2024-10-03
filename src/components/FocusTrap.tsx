@@ -4,7 +4,8 @@ interface Props {
   children: ReactElement;
   childRef: MutableRefObject<HTMLElement | null>;
 }
-const FOCUSABLE_CHILDREN_SELECTOR = 'a[href], button:not([disabled]), textarea, input, select';
+const FOCUSABLE_CHILDREN_SELECTOR =
+  'a[href], button, input:not([type="hidden"]), select, textarea, iframe, summary, [tabindex]';
 const FocusTrap = ({ children, childRef }: Props) => {
   const keyDownHandler: KeyboardEventHandler<HTMLElement> = (e) => {
     // 탭키 클릭시만 동작

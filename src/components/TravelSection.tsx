@@ -60,7 +60,7 @@ const TravelSection = () => {
   };
 
   return (
-    <div className={styles.travelSection}>
+    <article className={styles.travelSection}>
       <button
         aria-label="이전 여행 상품"
         className={`${styles.navButton} ${styles.navButtonPrev}`}
@@ -104,7 +104,7 @@ const TravelSection = () => {
       >
         <img src={chevronRight} className={styles.navButtonIcon} />
       </button>
-    </div>
+    </article>
   );
 };
 
